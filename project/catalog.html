@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <!-- link href="css/style.css" rel="stylesheet" -->
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html">
-          <img src="https//:img.logo.com/138x70" alt="Седона">
+          <img src="img/logo/logo-of-sedona.svg" width="138" height="70" alt="Логотип Седоны - горы и мост ">
         </a>
         <ul>
           <li><a href="index.html">Информация</a></li>
@@ -35,7 +36,7 @@
                   <label for="checkbox2">Парковка</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="wifi" value="Парковка" id="checkbox3">
+                  <input type="checkbox" name="wifi" value="Wi-Fi" id="checkbox3">
                   <label for="checkbox3">Wi-Fi</label>
                 </li>
               </ul>
@@ -80,10 +81,10 @@
             <div>
               <ul>
                 <li>
-                  <a href="#">&#9650;</a>
-                </li> <!--Сортировка по увеличению/уменьшению показателя-->
+                  <a href="#"><img src="img/catalog/arrow-up.svg" width="11" height="10" alt="Сортировать по увеличению"></a>
+                </li> 
                 <li>
-                  <a href="#">&#9660;</a>
+                  <a href="#"><img src="img/catalog/arrow-down.svg" width="11" height="10" alt="Сортировать по уменьшению"></a>
                 </li>
               </ul>
             </div>          
@@ -93,39 +94,45 @@
             <ul>
               <li>
                 <h3>Amara Resort & Spa</h3>
-                <img src="img/amara-hotel.jpg/135x90" alt="Фото Amara Resort & Spa">
+                <img src="img/catalog/amara.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
                 <p>
                   Гостиница
                   От 4000 &#8381;
               </p>
                 <a href="#">Подробнее</a>
                 <button type="button">Забронировать</button>
-                <span>&#9733;&#9733;&#9733;&#9733;</span>
-                <p>Рейтинг: 8,5</p>                 
+                <ul>
+                  <li>&#9733;&#9733;&#9733;&#9733;</li> <!--псевдоэлемент-->
+                  <li>Рейтинг: 8,5</li>
+                </ul>                
               </li>
               <li>
                 <h3>Desert Quail Inn</h3>
-                <img src="img/desert-hotel.jpg135x90" alt="Фото Desert Quail Inn">
+                <img src="img/catalog/desert.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
                 <p>
                   Мотель
                   От 3000 &#8381;
                 </p>
                 <a href="#">Подробнее</a>
                 <button type="button">Забронировать</button>
-                <span>&#9733;&#9733;&#9733;</span>
-                <p>Рейтинг: 8,9</p>
+                <ul>
+                  <li>&#9733;&#9733;&#9733;</li> <!--псевдоэлемент-->
+                  <li>Рейтинг: 8,9</li> 
+                </ul>
               </li>
               <li>
                 <h3>Villas at Poco Diablo</h3>
-                <img src="img/poco-hotel.jpg135x90" width="135" height="90" alt="Фото Villas at Poco Diablo">
+                <img src="img/catalog/villas.jpg" width="135" height="90" alt="Фото Villas at Poco Diablo">
                 <p>
                   Мотель
                   От 2000 &#8381;
                 </p>
                 <a href="#">Подробнее</a>
                 <button type="button">Забронировать</button>
-                <span>&#9733;&#9733;</span>
-                <p>Рейтинг: 8,9</p>
+                <ul>
+                  <li>&#9733;&#9733;</li> <!--псевдоэлемент-->
+                  <li>Рейтинг: 8,9</li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -154,7 +161,7 @@
         <section>
           <h2>Разработано</h2>
           <span>Website by</span>
-          <a href="https://htmlacademy.ru/">HTML academy</a>
+          <a href="https://htmlacademy.ru/"><img src="img/logo/logo_htmlacademy.svg" width="115" height="33" alt=""></a>
         </section>
       </footer>
       </body>
