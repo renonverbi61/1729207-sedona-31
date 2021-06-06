@@ -2,8 +2,8 @@
 @font-face {
   font-family: "PT Sans";
   src:
-    url("project\fonts\PTSans.woff2") format("woff2"),
-    url("project\fonts\PTSans.woff") format("woff");
+    url("/project/fonts/PTSans.woff2") format("woff2"),
+    url("/project/fonts/PTSans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -11,8 +11,8 @@
 @font-face {
   font-family: "PT Sans";
   src:
-    url("project\fonts\PTSans-Bold.woff2") format("woff2"),
-    url("project\fonts\PTSans-Bold.woff") format("woff");
+    url("/project/fonts/PTSans-Bold.woff2") format("woff2"),
+    url("/project/fonts/PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
   --basic-brown: #766357;
   --basic-dark: #000000;
 
-  --spetial-blue-middle:#669EC0;
+  --speсial-blue-middle:#669EC0;
   --special-blue-strong: #5496BD;
   --special-grey-icon: #CACACA;
 
@@ -33,9 +33,9 @@
   --special-brown-strong: #503E33;
 
   --special-grey-form:#F2F2F2;
-  --spetial-grey-hover:#EBEBEB;
-  --spetial-grey-check: #6A6A6A;
-  --spetial-grey-focus: #E5E5E5;
+  --special-grey-hover:#EBEBEB;
+  --special-grey-check: #6A6A6A;
+  --special-grey-focus: #E5E5E5;
  }
 
  /* Global */
@@ -51,229 +51,204 @@ body {
   color: var(--basic-dark);
   background-color: var(--basic-white);
 }
-/* Стилизовать по классу
-a {
-  text-decoration: none;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-*/
-.site-navigation-list {
+/*.header
+.navigation
+.navigation__icon*/
+
+.navigation__list {
   font-weight: bold;
   line-height: 26px;
   list-style: none;
   font-style: normal;
 }
-.navigation {
+.navigation__breadcrumbs,
+.footer__phone {
   text-decoration: none;
   color: var(--basic-dark);
 }
 
-/* useles navigation */
-
-.navigation:link {
+/* User navigation */
+.navigation__breadcrumbs:link {
   color: var(--basic-dark);
 }
-.n.navigation:visited {
+.navigation__breadcrumbs:visited {
   color: var(--basic-brown);
-  }
-.navigation:focus,
-.navigation:hover {
+}
+.navigation__breadcrumbs:focus,
+.navigation__breadcrumbs:hover {
   color: var(--basic-blue);
 }
-.navigation:active {
+.navigation__breadcrumbs:active {
   color: var(--special-grey-icon);
 }
 
-/* main */
+/*.main*/
+
 .welcome {
   background-image: url("../img/index/welcome-background.jpg");
   width: 1200px;
   height: 509px;
   background-position:  top center;
+  margin: 0 auto;
   background-repeat: no-repeat;
-  background-color: var(--basic-blue);
+  background-color: var(--basic-grey);
   text-align: center;
 }
-.welcome-text {
+/*Центрировать*/
+.welcome__logo {
   margin-top: 77px;
   margin-bottom: 82px;
 }
-.title {
+
+/*.slogan*/
+.slogan__title {
   text-align: center;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  font-style: normal;
-  background-color: var(--basic-white);
+
 }
-.subtitle {
+.slogan__subtitle {
   text-align: center;
   line-height: 26px;
-  background-color: var(--basic-white);
-  font-style: normal;
 }
-.reasons-item-main {
+
+/*.benefits
+.benefits__natura
+.benefits__image
+
+.benefits-tourism
+.benefits__image + задать модификатор
+.benefits__more*/
+
+.benefits__background {
+  background-color: var(--basic-grey);
+}
+
+.benefits__main {
   color: var(--basic-white);
   text-align: center;
   background-color: var(--basic-blue);
 }
-.benefits {
-  font-size: 21px;
-  background-color: var(--basic-white);
-  font-style: normal;
-}
-.description {
-  font-weight: bold;
-  font-size: 21px;
-}
-.reasons-list {
+.benefits__list {
   list-style: none;
   text-align: center;
   font-style: normal;
-  background-color: var(--basic-white);
 }
-.hidden {
-  display: none;
-}
-.interest-block {
-  text-align: center;
-  font-size: 14px;
-  line-height: 24px;
+.benefits__title {
+  font-size: 21px;
+  font-weight: bold;
   font-style: normal;
-  background-color: var(--basic-white);
+  text-align: center;
 }
-.interest {
+
+/*sections modal*/
+.modal {
+  text-align: center;
+  background-color: var(--basic-white);
+  line-height: 24px;
+}
+.modal__title {
   font-weight: bold;
   font-size: 30px;
 }
-.button {
+.modal__form-invisible {
   width: 568px;
-  height: 86px;
-  font-size: 21px;
-  font-weight: bold;
+  height: 395px;
+  box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
   line-height: 26px;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  font-style: normal;
-  background-color: var(--basic-brown);
 }
-.button-form {
-  width: 458px;
-  height: 58px;
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 26px;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  font-style: normal;
-  background-color: var(--basic-blue);
-
-}
-.main-footer {
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 26px;
-  background-color: var(--basic-white);
-  font-style: normal;
-}
-.contacts-phone {
-  text-decoration: none;
-  color: var(--basic-dark);
-}
-.social-cont{
+.modal__form-content{
   list-style: none;
-  text-align: center;
+  font-weight: bold;
 }
-.social-button {
-  background: var(--basic-blue);
-  line-height: 20px;
-  padding: 0px 0px;
-}
-.from {
-  font-size: 14px;
-}
-.form-content {
+.modal__form-data {
   width: 346px;
   height: 38px;
   background: var(--special-grey-form);
-  font-family:"PT Sans", sans-serif, Arial;
-  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button {
+  text-transform: uppercase;
+  font-size: 21px;
   font-weight: bold;
   line-height: 26px;
-  text-transform: uppercase;
-  padding-top: 6px;
-  padding-left: 13px;
+  vertical-align: middle;
+  color: var(--basic-white);
+  font-style: normal;
+}
+.activate-modal  {
+  width: 568px;
+  height: 86px;
+  background-color: var(--basic-brown);
+}
+.post_button {
+  width: 458px;
+  height: 58px;
+  background-color: var(--basic-blue);
 }
 
-/* useles form */
-.form-content:link {
+/* User data form */
+.modal__form-data:link {
   background: var(--special-grey-form);
 }
-.form-content:focus {
-  background: var(--spetial-grey-focus);
+.modal__form-data:focus {
+  background: var(--basic-white);
 }
-.form-content:hover {
+.modal__form-data:hover {
   background: var(--special-grey-hover);
 }
 
-/* useles form button */
-.button-form:link {
+/* User form post_button */
+
+.post_button:link {
   background: var(--basic-blue);
 }
-.button-form:hover {
-  background: var(--spetial-blue-middle);
-}
-.button-form:active {
-  background: var(--spetial-blue-middle);
+.post_button:hover,
+.post_button:active {
+  background: var(--speсial-blue-middle);
 }
 .search:active {
   opacity:0.3;
 }
+/* User activate modal */
 
-/* useles search hotel button */
-.button:link {
+.activate-modal:link {
   background: var(--basic-brown);
 }
-.button:hover {
+.activate-modal:hover {
   background: var(--special-brown-middle);
 }
-.button:active {
+.activate-modal:active {
   background: var(--special-brown-strong);
 }
-.search:active {
-  opacity:0.3;
-}
+/*.footer
 
-/* useles social */
-.social-button:link {
-  background-color: var(--basic-blue);
+.footer__contacts
+.footer__social-list
+.footer__developed-button
+*/
+.hidden {
+  display: none;
 }
-.social-button:focus,
-.social-button:hover {
-  background-color: var(--spetial-blue-middle);
-}
-.social-button:active {
-  background-color: var(--special-blue-strong);
-}
-/* useles button-logoacademy на следующем этапе*/
-.form-invisible {
-  width: 568px;
-  height: 395px;
-  background: var(--basic-white);
-  font-weight: bold;
+.footer {
+  font-size: 21px;
   line-height: 26px;
-  box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
-  padding-right: 55px;
-  padding-top: 61px;
+  font-weight: bold;
+  background-color: var(--basic-white);
 }
-.form-text {
+.footer__social {
+  text-align: center;
+}
+.footer__social ul {
   list-style: none;
 }
-
-
+.footer__button {
+  background: var(--basic-blue);
+}
+.footer__developed {
+  font-size: 14px;
+  font-weight: normal;
+}
