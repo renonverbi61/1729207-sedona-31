@@ -1,0 +1,254 @@
+/* Fonts */
+@font-face {
+  font-family: "PT Sans";
+  src:
+    url("/project/fonts/PTSans.woff2") format("woff2"),
+    url("/project/fonts/PTSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src:
+    url("/project/fonts/PTSans-Bold.woff2") format("woff2"),
+    url("/project/fonts/PTSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --basic-white:#FFFFFF;
+  --basic-grey: #EEEEEE;
+  --basic-blue: #81B3D2;
+  --basic-brown: #766357;
+  --basic-dark: #000000;
+
+  --speсial-blue-middle:#669EC0;
+  --special-blue-strong: #5496BD;
+  --special-grey-icon: #CACACA;
+
+  --special-brown-middle: #604E43;
+  --special-brown-strong: #503E33;
+
+  --special-grey-form:#F2F2F2;
+  --special-grey-hover:#EBEBEB;
+  --special-grey-check: #6A6A6A;
+  --special-grey-focus: #E5E5E5;
+ }
+
+ /* Global */
+body {
+  min-width: 768px;
+  margin: 0;
+  padding: 0;
+  font-family:"PT Sans", sans-serif, Arial;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+}
+
+/*.header
+.navigation
+.navigation__icon*/
+
+.navigation__list {
+  font-weight: bold;
+  line-height: 26px;
+  list-style: none;
+  font-style: normal;
+}
+.navigation__breadcrumbs,
+.footer__phone {
+  text-decoration: none;
+  color: var(--basic-dark);
+}
+
+/* User navigation */
+.navigation__breadcrumbs:link {
+  color: var(--basic-dark);
+}
+.navigation__breadcrumbs:visited {
+  color: var(--basic-brown);
+}
+.navigation__breadcrumbs:focus,
+.navigation__breadcrumbs:hover {
+  color: var(--basic-blue);
+}
+.navigation__breadcrumbs:active {
+  color: var(--special-grey-icon);
+}
+
+/*.main*/
+
+.welcome {
+  background-image: url("../img/index/welcome-background.jpg");
+  width: 1200px;
+  height: 509px;
+  background-position:  top center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-color: var(--basic-grey);
+  text-align: center;
+}
+/*Центрировать*/
+.welcome__logo {
+  margin-top: 77px;
+  margin-bottom: 82px;
+}
+
+/*.slogan*/
+.slogan__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+
+}
+.slogan__subtitle {
+  text-align: center;
+  line-height: 26px;
+}
+
+/*.benefits
+.benefits__natura
+.benefits__image
+
+.benefits-tourism
+.benefits__image + задать модификатор
+.benefits__more*/
+
+.benefits__background {
+  background-color: var(--basic-grey);
+}
+
+.benefits__main {
+  color: var(--basic-white);
+  text-align: center;
+  background-color: var(--basic-blue);
+}
+.benefits__list {
+  list-style: none;
+  text-align: center;
+  font-style: normal;
+}
+.benefits__title {
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+/*sections modal*/
+.modal {
+  text-align: center;
+  background-color: var(--basic-white);
+  line-height: 24px;
+}
+.modal__title {
+  font-weight: bold;
+  font-size: 30px;
+}
+.modal__form-invisible {
+  width: 568px;
+  height: 395px;
+  box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
+  line-height: 26px;
+}
+.modal__form-content{
+  list-style: none;
+  font-weight: bold;
+}
+.modal__form-data {
+  width: 346px;
+  height: 38px;
+  background: var(--special-grey-form);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button {
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  vertical-align: middle;
+  color: var(--basic-white);
+  font-style: normal;
+}
+.activate-modal  {
+  width: 568px;
+  height: 86px;
+  background-color: var(--basic-brown);
+}
+.post_button {
+  width: 458px;
+  height: 58px;
+  background-color: var(--basic-blue);
+}
+
+/* User data form */
+.modal__form-data:link {
+  background: var(--special-grey-form);
+}
+.modal__form-data:focus {
+  background: var(--basic-white);
+}
+.modal__form-data:hover {
+  background: var(--special-grey-hover);
+}
+
+/* User form post_button */
+
+.post_button:link {
+  background: var(--basic-blue);
+}
+.post_button:hover,
+.post_button:active {
+  background: var(--speсial-blue-middle);
+}
+.search:active {
+  opacity:0.3;
+}
+/* User activate modal */
+
+.activate-modal:link {
+  background: var(--basic-brown);
+}
+.activate-modal:hover {
+  background: var(--special-brown-middle);
+}
+.activate-modal:active {
+  background: var(--special-brown-strong);
+}
+/*.footer
+
+.footer__contacts
+.footer__social-list
+.footer__developed-button
+*/
+.hidden {
+  display: none;
+}
+.footer {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  background-color: var(--basic-white);
+}
+.footer__social {
+  text-align: center;
+}
+.footer__social ul {
+  list-style: none;
+}
+.footer__button {
+  background: var(--basic-blue);
+}
+.footer__developed {
+  font-size: 14px;
+  font-weight: normal;
+}
