@@ -36,6 +36,7 @@
   --special-grey-hover:#EBEBEB;
   --special-grey-check: #6A6A6A;
   --special-grey-focus: #E5E5E5;
+  --special-grey-rating:#666666;
  }
 
  /* Global */
@@ -101,15 +102,7 @@ body {
   margin-bottom: 82px;
 }
 
-/*.slogan*/
-.slogan__title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-
-}
-.slogan__subtitle {
+.slogan {
   text-align: center;
   line-height: 26px;
 }
@@ -173,7 +166,7 @@ body {
 .button {
   text-transform: uppercase;
   font-size: 21px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 26px;
   vertical-align: middle;
   color: var(--basic-white);
@@ -182,11 +175,13 @@ body {
 .activate-modal  {
   width: 568px;
   height: 86px;
+  font-weight: bold;
   background-color: var(--basic-brown);
 }
 .post_button {
   width: 458px;
   height: 58px;
+  font-weight: bold;
   background-color: var(--basic-blue);
 }
 
@@ -210,18 +205,21 @@ body {
 .post_button:active {
   background: var(--speсial-blue-middle);
 }
-.search:active {
+.transparent:active {
   opacity:0.3;
 }
 /* User activate modal */
 
-.activate-modal:link {
+.activate-modal:link,
+.results__button:link {
   background: var(--basic-brown);
 }
-.activate-modal:hover {
+.activate-modal:hover,
+.results__button:hover {
   background: var(--special-brown-middle);
 }
-.activate-modal:active {
+.activate-modal:active,
+.results__button:active {
   background: var(--special-brown-strong);
 }
 /*.footer
@@ -251,4 +249,137 @@ body {
 .footer__developed {
   font-size: 14px;
   font-weight: normal;
+}
+
+/*main-catalog*/
+
+.selection {
+  width: 1200px;
+  height: 217px;
+  font-style: normal;
+  background-color: var(--basic-brown);
+  background-image: url(../img/catalog/checklist-background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: var(--basic-white);
+  column-count: 3; /*потом на флексах*/
+}
+/*.selection__form*/
+
+.fieldset {
+  border: 0 none;
+}
+.selection__legend {
+  font-weight: bold;
+  font-size: 16px;
+}
+.checklist {
+  list-style: none;
+}
+.checklist a {
+  text-decoration: none;
+}
+
+/*.selection_slider-cost
+.selection__Infrastructure
+selection__housing*/
+
+.selection__button {
+  font-size: 14px;
+  line-height: 21px;
+  width: 137px;
+  height: 36px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  background: none;
+}
+
+/*sorting__title*/
+.title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.sorting {
+  font-style: normal;
+}
+/*sorting__sum
+.sorting__range-list
+.sorting__arrow
+.arrow
+*/
+
+.sorting__range {
+  font-size: 12px;
+  line-height: 18px;
+}
+.sorting__particle {
+  color: var(--special-grey-icon);
+  border-bottom: 1px dotted var(--basic-blue);
+  list-style: none;
+}
+/* User sorting__range */
+
+.sorting__particle:hover {
+  color: var(--basic-blue);
+  border-bottom: 1px dotted var(--basic-blue);
+}
+.sorting__particle:active {
+  color: var(--basic-dark);
+  border-bottom: none;
+ }
+.active {
+  list-style: none;
+  color: var(--basic-blue);
+}
+/* User sorting__arow стилизация элементов svg будет позже
+.arrow:hover {
+  color: var(--basic-dark);
+}
+.arrow:active {
+  color: var(--basic-blue);
+}*/
+
+/*.results
+.results__list
+*/
+
+
+.results__button {
+  width: 142px;
+  height: 27px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  border-radius: 0px;
+  background-color: var(--basic-brown);
+}
+.reasults__info {
+  list-style: none;
+  /* display:inline-block;*/
+  width: 110px;
+  height: 27px;
+  color: var(--basic-white);
+  font-weight: bold;
+  background-color: var(--basic-blue);
+}
+.results__rating {
+  background-color: var(--special-grey-form);
+  width: 110px;
+  height: 27px;
+  color: var(--special-grey-rating);
+}
+.fieldset {
+  border:0 none;
+}
+/* User results__button */
+.reasults__info:link {
+  background: var(--basic-blue);
+}
+.reasults__info:hover {
+  background: var(--speсial-blue-middle);
+}
+.reasults__info:active {
+  background: var(--special-blue-strong);
 }
