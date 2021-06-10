@@ -40,7 +40,7 @@
  }
 
  /* Global */
-body {
+ .page-body {
   min-width: 768px;
   margin: 0;
   padding: 0;
@@ -51,11 +51,43 @@ body {
   line-height: 21px;
   color: var(--basic-dark);
   background-color: var(--basic-white);
+  height: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* Grid */
+
+.page {
+  height: 100%;
 }
 
 /*.header
-.navigation
-.navigation__icon*/
+.navigation .center {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+}*/
+
+.navigation {
+  display: grid;
+  width: 1020px;
+}
+.navigation__icon {
+  order: 1;
+  justify-self: center;
+}
+
+.navigation-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
 
 .navigation__list {
   font-weight: bold;
@@ -86,10 +118,16 @@ body {
 
 /*.main*/
 
+.center {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .welcome {
   background-image: url("../img/index/welcome-background.jpg");
   width: 1200px;
-  height: 509px;
+  height: 510px;
   background-position:  top center;
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -102,9 +140,20 @@ body {
   margin-bottom: 82px;
 }
 
+/* Grid */
+
+.welcome-container {
+  display: grid;
+  grid-template-columns: 1200px;
+  grid-template-rows: 510px 216px;
+}
+
+
+
 .slogan {
   text-align: center;
   line-height: 26px;
+  padding-top: 42px;
 }
 
 /*.benefits
@@ -115,8 +164,30 @@ body {
 .benefits__image + задать модификатор
 .benefits__more*/
 
-.benefits__background {
-  background-color: var(--basic-grey);
+
+/* Grid */
+
+.benefits__natura .container,
+.benefits-tourism .container{
+  display: grid;
+  grid-template-rows: min-content;
+  width: 1200px;
+  height: 256px;
+  margin-bottom: 0px;
+}
+.benefits__natura .container {
+  grid-template-columns: 400px 800px;
+}
+.benefits-tourism .container {
+  grid-template-columns: 800px 400px;
+}
+.benefits__image-left {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.benefits__image-right {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .benefits__main {
@@ -129,11 +200,35 @@ body {
   text-align: center;
   font-style: normal;
 }
+.benefits__more-natura .benefits__list svg {
+  padding-top: 60px;
+}
 .benefits__title {
   font-size: 21px;
   font-weight: bold;
   font-style: normal;
-  text-align: center;
+  padding-top: 47px;
+  margin-top: 0px;
+}
+
+/* Grid */
+
+.benefits__more-natura .container,
+.benefits__more-tourism .container {
+  display: grid;
+  width: 1200px;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 1fr;
+}
+.benefits__more-natura .container {
+  height: 334px;
+}
+.benefits__more-tourism .container {
+  height: 256px;
+}
+
+.benefits__more-tourism  {
+  background-color: var(--basic-grey);
 }
 
 /*sections modal*/
@@ -152,7 +247,7 @@ body {
   box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
   line-height: 26px;
 }
-.modal__form-content{
+.modal__form-content {
   list-style: none;
   font-weight: bold;
 }
@@ -222,27 +317,47 @@ body {
 .results__button:active {
   background: var(--special-brown-strong);
 }
-/*.footer
-
-.footer__contacts
-.footer__social-list
-.footer__developed-button
-*/
-.hidden {
+/*.map {
   display: none;
 }
+.sedona-map {
+  background-image: url(../img/index/map.jpg);*/
 .footer {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  background-color: var(--basic-white);
-}
-.footer__social {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 23px 0;
+  margin-top: -120px;
+  z-index: 1;
   text-align: center;
 }
-.footer__social ul {
+
+/* Grid */
+
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/*.footer__contacts*/
+
+.footer__social-list {
   list-style: none;
 }
+/*.footer__developed-button*/
+
+.hidden {
+  display: none;
+}
+.zero {
+  padding: 0;
+  margin: 0 auto;
+
+}
+/*.footer__social*/
+
 .footer__button {
   background: var(--basic-blue);
 }
@@ -383,3 +498,4 @@ selection__housing*/
 .reasults__info:active {
   background: var(--special-blue-strong);
 }
+
