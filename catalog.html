@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body class="page-body">
+    <header class="header">
+      <div class="center">
+        <nav class="navigation">
+          <a href="index.html" class="navigation__icon">
+            <img src="img/logo/logo-of-sedona.svg" width="138" height="70" alt="Логотип Седоны - горы и мост ">
+          </a>
+          <div class="center">
+            <ul class="navigation__list">
+              <li><a href="index.html" class="navigation__breadcrumbs">Информация</a></li>
+              <li><a href="blank.html" class="navigation__breadcrumbs">Фото и видео</a></li>
+              <li><a href="blank.html" class="navigation__breadcrumbs">Карта штата</a></li>
+              <li><a href="catalog.html" class="navigation__breadcrumbs">Гостиницы</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main-catalog">
+        <section class="selection">
+          <h2 class="hidden">Поиск гостиницы</h2>
+          <form method="get" action="https://echo.htmlacademy.ru" class="selection__form">
+            <fieldset class="fieldset">
+              <legend class="selection__legend selection__infrastructure">Инфраструктура:</legend>
+              <ul class="checklist">
+                <li>
+                  <input type="checkbox" name="pool" value="Бассейн" id="checkbox1" checked>
+                  <label for="checkbox1">Бассейн</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="parking" value="Парковка" id="checkbox2">
+                  <label for="checkbox2">Парковка</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="wifi" value="Wi-Fi" id="checkbox3">
+                  <label for="checkbox3">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="selection__legend selection__housing">Тип жилья:</legend>
+              <ul class="checklist">
+                <li>
+                  <input type="checkbox" name="hosel" value="Гостиница" id="checkbox4" checked>
+                  <label for="checkbox4">Гостиница</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="motel" value="Мотель" id="checkbox5">
+                  <label for="checkbox5">Мотель</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="apartments" value="Апартаменты" id="checkbox6">
+                  <label for="checkbox6">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="fieldset-slider-cost">
+              <span class="selection__legend selection_slider-cost">Стоимость в сутки,&#8381;</span>
+                <div> <!--Здесь будет двойной ползунок-->
+                  <input type="range" name="price-min" id="price-range-min" min="0" max="3000">
+                  <label for="price-range-min">От</label>
+                  <input type="range" name="price-max" id="price-range-max" min="0" max="3000">
+                  <label for="price-range-max">До</label>
+                </div>
+              <button type="submit" class="button selection__button">Показать</button>
+            </div>
+          </form>
+        </section>
+        <section class="section-sorting">
+          <div class="center">
+            <div class="sorting">
+              <div class="sorting__sum">
+                <h2 class="hidden">Сортировка</h2>
+                <span class="sorting__title title">Найдено: 3</span>
+              </div>
+              <div class="sorting__range">
+                <span>Сортировка:</span>
+                <ul class="sorting__range-list checklist">
+                  <li><a href="#" class="active">По цене</a></li>
+                  <li><a href="#" class="sorting__particle">По типу</a></li>
+                  <li><a href="#" class="sorting__particle">По рейтингу</a></li>
+                </ul>
+              </div>
+                <div class="sorting__arrow">
+                  <ul class="checklist">
+                    <li>
+                      <a href="#" class="arrow"><img src="img/catalog/arrow-up.svg" width="11" height="10" alt="Сортировать по увеличению"></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="img/catalog/arrow-down.svg" width="11" height="10" alt="Сортировать по уменьшению"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            <div class="results">
+              <h2 class="hidden">Результаты</h2>
+              <ul class="results__list checklist">
+                <li class="img">
+                  <h3 class="title">Amara Resort & Spa</h3>
+                  <img src="img/catalog/amara.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
+                  <p>
+                    Гостиница
+                    От 4000 &#8381;
+                  </p>
+                  <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
+                  <button type="button" class="button results__button"><span class="transparent">Забронировать</span></button>
+                  <ul class="checklist">
+                    <li>&#9733;&#9733;&#9733;&#9733;</li> <!--псевдоэлемент-->
+                    <li class="results__rating">Рейтинг: 8,5</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3 class="title">Desert Quail Inn</h3>
+                  <img src="img/catalog/desert.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
+                  <p>
+                    Мотель
+                    От 3000 &#8381;
+                  </p>
+                  <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
+                  <button type="button" class="button results__button"><span class="transparent">Забронировать</span></button>
+                  <ul class="checklist">
+                    <li>&#9733;&#9733;&#9733;</li> <!--псевдоэлемент-->
+                    <li class="results__rating">Рейтинг: 8,9</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3 class="title">Villas at Poco Diablo</h3>
+                  <img src="img/catalog/villas.jpg" width="135" height="90" alt="Фото Villas at Poco Diablo">
+                  <p>
+                    Мотель
+                    От 2000 &#8381;
+                  </p>
+                  <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
+                  <button type="button" class="button results__button"><span class="transparent">Забронировать</span></button>
+                  <ul class="checklist">
+                    <li>&#9733;&#9733;</li> <!--псевдоэлемент-->
+                    <li class="results__rating">Рейтинг: 8,9</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="center">
+        <div class="container">
+          <section class="footer__contacts">
+              <h2 class="hidden">Контакты</h2>
+              <p class="tag">#VISITSEDONA</p>
+              <a class="footer__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </section>
+          <section class="footer__social">
+              <h2 class="hidden">Соцсети</h2>
+              <ul class="footer__social-list zero">
+                <li>
+                  <a class="footer__button" href="#"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__button" href="#"><svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__button" href="#"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+          </section>
+          <section class="footer__developed">
+            <h2 class="hidden">Разработано</h2>
+            <span>Website by</span>
+            <a href="https://htmlacademy.ru/" class="footer__developed-button"><img src="img/logo/logo_htmlacademy.svg" width="115" height="33" alt=""></a>
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
