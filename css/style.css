@@ -2,8 +2,8 @@
 @font-face {
   font-family: "PT Sans";
   src:
-    url("/project/fonts/PTSans.woff2") format("woff2"),
-    url("/project/fonts/PTSans.woff") format("woff");
+    url("/../fonts/PTSans.woff2") format("woff2"),
+    url("/../fonts/PTSans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -11,8 +11,8 @@
 @font-face {
   font-family: "PT Sans";
   src:
-    url("/project/fonts/PTSans-Bold.woff2") format("woff2"),
-    url("/project/fonts/PTSans-Bold.woff") format("woff");
+    url("/../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("/../fonts/PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -74,23 +74,37 @@
   margin: 0 auto;
 }
 
-/* Grid */
+/* Grid*/
 
 .navigation {
-  display: grid;
-  width: 1020px;
+  width: 1200px;
+  height: 56px;
 }
 .navigation__icon {
-  order: 1;
-  justify-self: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -69px; /*половина размера изображения*/
 }
 
+/* Flex index nav*/
+/* По критериям первые два надо прижать к левому краю, последние - к правому !Правка!*/
+
 .navigation__list {
-  width: 1060px;
+  display: flex;
+  justify-content: space-between;
   font-weight: bold;
   line-height: 26px;
   list-style: none;
   font-style: normal;
+  margin: 0;
+  padding: 13px 72px 17px; /*top lr bottom*/
+}
+.navigation__list li:nth-child(2) {
+  padding-right: 133px;
+}
+.navigation__list li:nth-child(3) {
+  padding-left: 147px;
 }
 .navigation__breadcrumbs,
 .footer__phone {
@@ -123,7 +137,7 @@
   grid-template-rows: 510px 216px;
 }
 .welcome-container {
-  background-image: url("../img/index/welcome-background.jpg");
+  background-image: url("../img/index/welcome-background_line.jpg");
   width: 1200px;
   height: 510px;
   background-position:  top center;
@@ -137,12 +151,13 @@
   margin-bottom: 82px;
   justify-self: center;
 }
+
 /*  ОБРАТИТЬ ВНИМАНИЕ, схлопывается с benefits*/
+
 .slogan {
   text-align: center;
   line-height: 26px;
   padding-top: 42px;
-  bottom: 3px solid var(--special-brown-middle);
 }
 
 /*.benefits__image + задать модификатор*/
@@ -164,11 +179,12 @@
 }
 .benefits__text-natura {
   grid-template-columns: 400px 800px;
-  grid-column-start: 1 / 2;
+  grid-column: 1 / 2;
 }
+
 .benefits__text-tourism {
   grid-template-columns: 800px 400px;
-  grid-column-start: 2 / 3;
+  grid-column: 2 / 3;
 }
 .benefits__image-left {
   grid-column: 2 / 3;
@@ -229,15 +245,29 @@
   font-weight: bold;
   font-size: 30px;
 }
+
+/*Flex modal form*/
+
 .modal__form-invisible {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
   width: 568px;
   height: 395px;
   box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
   line-height: 26px;
 }
 .modal__form-content {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
 }
 .modal__form-data {
   width: 346px;
@@ -245,6 +275,14 @@
   background: var(--special-grey-form);
   font-weight: bold;
   text-transform: uppercase;
+}
+.modal__form-content li {
+  display: flex;
+  margin-bottom: 20px;
+}
+.modal__form-content li input {
+  margin-left: 10px;
+  margin-right: 0;
 }
 .button {
   text-transform: uppercase;
@@ -266,6 +304,7 @@
   height: 58px;
   font-weight: bold;
   background-color: var(--basic-blue);
+
 }
 
 /* User data form */
@@ -335,9 +374,6 @@
 
 /*.footer__contacts*/
 
-.footer__social-list {
-  list-style: none;
-}
 /*.footer__developed-button*/
 
 .hidden {
@@ -348,10 +384,22 @@
   margin: 0 auto;
 
 }
-/*.footer__social*/
 
+/*footer flex
+
+.footer__social */
+
+.footer__social-list {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  align-items: baseline;
+  list-style: none;
+}
 .footer__button {
   background: var(--basic-blue);
+  padding: 7px 12px; /*Неровные квадраты*/
+  margin-left: 6px;
 }
 .footer__developed {
   font-size: 14px;
@@ -361,7 +409,6 @@
 /*main-catalog*/
 
 .selection {
-  width: 1200px;
   height: 217px;
   font-style: normal;
   background-color: var(--basic-brown);
