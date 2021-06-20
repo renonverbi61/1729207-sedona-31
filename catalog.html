@@ -12,19 +12,17 @@
     <header class="header">
       <div class="center">
         <nav class="navigation">
-          <a href="index.html" class="navigation__icon">
-            <img src="img/logo/logo-of-sedona.svg" width="138" height="70" alt="Логотип Седоны - горы и мост ">
-          </a>
-          <div class="center">
-            <ul class="navigation__list">
-              <li><a href="index.html" class="navigation__breadcrumbs">Информация</a></li>
-              <li><a href="blank.html" class="navigation__breadcrumbs">Фото и видео</a></li>
-              <li><a href="blank.html" class="navigation__breadcrumbs">Карта штата</a></li>
-              <li><a href="catalog.html" class="navigation__breadcrumbs">Гостиницы</a></li>
-            </ul>
-          </div>
+          <ul class="navigation__list">
+            <li class="nav-item"><a href="#" class="navigation__breadcrumbs">Информация</a></li>
+            <li class="nav-item"><a href="blank.html" class="navigation__breadcrumbs">Фото и видео</a></li>
+            <li class="nav-item"><a href="blank.html" class="navigation__breadcrumbs">Карта штата</a></li>
+            <li class="nav-item"><a href="catalog.html" class="navigation__breadcrumbs">Гостиницы</a></li>
+          </ul>
         </nav>
       </div>
+      <a href="index.html" class="navigation__icon">
+        <img src="img/logo/logo-of-sedona.svg" width="138" height="70" alt="Логотип Седоны - горы и мост" class="">
+      </a>
     </header>
     <main class="main-catalog">
         <section class="selection">
@@ -33,7 +31,7 @@
             <form method="get" action="https://echo.htmlacademy.ru" class="selection__form">
               <fieldset class="fieldset">
                 <legend class="selection__legend selection__infrastructure">Инфраструктура:</legend>
-                <ul class="checklist">
+                <ul class="checklist checklist-selection">
                   <li>
                     <input type="checkbox" name="pool" value="Бассейн" id="checkbox1" checked>
                     <label for="checkbox1">Бассейн</label>
@@ -50,7 +48,7 @@
               </fieldset>
               <fieldset class="fieldset">
                 <legend class="selection__legend selection__housing">Тип жилья:</legend>
-                <ul class="checklist">
+                <ul class="checklist checklist-selection">
                   <li>
                     <input type="checkbox" name="hosel" value="Гостиница" id="checkbox4" checked>
                     <label for="checkbox4">Гостиница</label>
@@ -67,11 +65,26 @@
               </fieldset>
               <div class="fieldset-slider-cost">
                 <span class="selection__legend selection_slider-cost">Стоимость в сутки,&#8381;</span>
-                  <div> <!--Здесь будет двойной ползунок-->
-                    <input type="range" name="price-min" id="price-range-min" min="0" max="3000">
-                    <label for="price-range-min">От</label>
-                    <input type="range" name="price-max" id="price-range-max" min="0" max="3000">
-                    <label for="price-range-max">До</label>
+                  <div class="slider-cost"> <!--Здесь будет двойной ползунок-->
+                    <div class="slider-price">
+                      <label for="price-range-min">
+                        От
+                        <input type="text" name="price-min" id="price-range-min" value="0">
+                      </label>
+                    </div>
+                    <div class="slider-price">
+                      <label for="price-range-max">
+                        До
+                        <input type="text" name="price-max" id="price-range-max" value="3000">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="slider-range">
+                    <div class="line">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="point point-min"> </div>
+                    <div class="point point-max"> </div>
                   </div>
                 <button type="submit" class="button selection__button">Показать</button>
               </div>
@@ -94,7 +107,7 @@
                 </ul>
               </div>
                 <div class="sorting__arrow">
-                  <ul class="checklist">
+                  <ul class="sorting__arrow-checklist checklist">
                     <li>
                       <a href="#" class="arrow"><img src="img/catalog/arrow-up.svg" width="11" height="10" alt="Сортировать по увеличению"></a>
                     </li>
@@ -107,44 +120,62 @@
             <div class="results">
               <h2 class="hidden">Результаты</h2>
               <ul class="results__list checklist">
-                <li class="img">
-                  <h3 class="title">Amara Resort & Spa</h3>
-                  <img src="img/catalog/amara.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
-                  <p>
-                    Гостиница
-                    От 4000 &#8381;
-                  </p>
-                  <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
-                  <button type="button" class="button results__button"><span class="transparent">Забронировать</span></button>
-                  <ul class="checklist">
+                <li class="hotels-list-items">
+                  <div>
+                    <img src="img/catalog/amara.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
+                  </div>
+                  <div class="hotels-items">
+                    <h3 class="title">Amara Resort & Spa</h3>
+                    <div class="hotel-cost">
+                      <p>Гостиница </p>
+                      <p>От 4000 &#8381;</p>
+                    </div>
+                    <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
+                    <button type="button" class="button results__button">
+                      <span class="transparent">Забронировать</span>
+                    </button>
+                  </div>
+                  <ul class="checklist rating">
                     <li>&#9733;&#9733;&#9733;&#9733;</li> <!--псевдоэлемент-->
                     <li class="results__rating">Рейтинг: 8,5</li>
                   </ul>
                 </li>
-                <li>
-                  <h3 class="title">Desert Quail Inn</h3>
-                  <img src="img/catalog/desert.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
-                  <p>
-                    Мотель
-                    От 3000 &#8381;
-                  </p>
-                  <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
-                  <button type="button" class="button results__button"><span class="transparent">Забронировать</span></button>
-                  <ul class="checklist">
+                <li class="hotels-list-items">
+                  <div>
+                    <img src="img/catalog/desert.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
+                  </div>
+                  <div class="hotels-items">
+                    <h3 class="title">Desert Quail Inn</h3>
+                    <div class="hotel-cost">
+                      <p>Мотель</p>
+                      <p>От 3000 &#8381;</p>
+                    </div>
+                    <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
+                    <button type="button" class="button results__button">
+                      <span class="transparent">Забронировать</span>
+                    </button>
+                  </div>
+                  <ul class="checklist rating">
                     <li>&#9733;&#9733;&#9733;</li> <!--псевдоэлемент-->
                     <li class="results__rating">Рейтинг: 8,9</li>
                   </ul>
                 </li>
-                <li>
-                  <h3 class="title">Villas at Poco Diablo</h3>
-                  <img src="img/catalog/villas.jpg" width="135" height="90" alt="Фото Villas at Poco Diablo">
-                  <p>
-                    Мотель
-                    От 2000 &#8381;
-                  </p>
-                  <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
-                  <button type="button" class="button results__button"><span class="transparent">Забронировать</span></button>
-                  <ul class="checklist">
+                <li class="hotels-list-items">
+                  <div>
+                    <img src="img/catalog/villas.jpg" width="135" height="90" alt="Фото Villas at Poco Diablo">
+                  </div>
+                  <div class="hotels-items">
+                    <h3 class="title">Villas at Poco Diablo</h3>
+                    <div class="hotel-cost">
+                      <p>Мотель</p>
+                      <p>От 2000 &#8381;</p>
+                    </div>
+                    <a href="#" class="reasults__info"><span class="transparent">Подробнее</span></a>
+                    <button type="button" class="button results__button">
+                      <span class="transparent">Забронировать</span>
+                    </button>
+                  </div>
+                  <ul class="checklist rating">
                     <li>&#9733;&#9733;</li> <!--псевдоэлемент-->
                     <li class="results__rating">Рейтинг: 8,9</li>
                   </ul>
