@@ -64,7 +64,9 @@
   height: 100%;
 }
 
-/*.header*/
+.header {
+  position: relative;
+}
 
 
 /* Центровщик */
@@ -76,10 +78,7 @@
 
 /* Grid*/
 
-.navigation {
-  width: 1200px;
-  height: 56px;
-}
+/*.navigation*/
 .navigation__icon {
   position: absolute;
   top: 0;
@@ -98,14 +97,20 @@
   list-style: none;
   font-style: normal;
   margin: 0;
-  padding: 13px 72px 17px; /*top lr bottom*/
+  padding-inline-start: 0;
+}
+
+.nav-item {
+  width: 236px;
+	height: 56px;
+	text-align: center;
+	padding-top: 14px;
+	box-sizing: border-box;
 }
 .navigation__list li:nth-child(2) {
-  padding-right: 133px;
+  margin-right: 238px;
 }
-.navigation__list li:nth-child(3) {
-  padding-left: 147px;
-}
+
 .navigation__breadcrumbs,
 .footer__phone {
   text-decoration: none;
@@ -177,14 +182,25 @@
   height: 256px;
   margin-bottom: 0px;
 }
+
+.benefits__descriptions {
+  margin-top: 23px;
+  margin-block-end: 0px;
+}
+
+.above {
+  margin-top: 25px;
+}
 .benefits__text-natura {
   grid-template-columns: 400px 800px;
   grid-column: 1 / 2;
+  padding: 47px 48px 54px;
 }
 
 .benefits__text-tourism {
   grid-template-columns: 800px 400px;
   grid-column: 2 / 3;
+  padding: 50px 49px 51px;
 }
 .benefits__image-left {
   grid-column: 2 / 3;
@@ -200,22 +216,34 @@
   text-align: center;
   background-color: var(--basic-blue);
 }
-.benefits__list {
-  list-style: none;
-  text-align: center;
-  font-style: normal;
-}
+
 .benefits__more-natura .benefits__list svg {
-  padding-top: 60px;
+  margin-bottom: 12px;
 }
 .benefits__title {
   font-size: 21px;
   font-weight: bold;
   font-style: normal;
+  margin: 0px auto;
+  max-width: 150px;
+}
+.item-natura {
+  max-width: 290px;
+  padding-top: 60px;
+  padding-bottom: 82px;
+  margin: 0 auto;
+}
+.item-tourism {
+  max-width: 258px;
   padding-top: 47px;
-  margin-top: 0px;
+  padding-bottom: 54px;
+  margin: 0 auto;
 }
 
+.benefits__number {
+  display: block;
+  margin-top: 24px;
+}
 /* Grid */
 
 .benefits__list {
@@ -223,7 +251,11 @@
   width: 1200px;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: 1fr;
+  list-style: none;
+  text-align: center;
+  font-style: normal;
 }
+
 .benefits__more-natura {
   height: 330px;
 }
@@ -231,11 +263,11 @@
   height: 256px;
   background-color: var(--basic-grey);
 }
-.benefits__list p {
-  padding-left: 60px;
-  padding-right: 60px;
-}
+
 /*sections modal*/
+.popap {
+  position: relative;
+}
 .modal {
   text-align: center;
   background-color: var(--basic-white);
@@ -250,13 +282,18 @@
 
 .modal__form-invisible {
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -284px;
+  background-color: var(--basic-white);
+  width: 568px;
+  height: 395px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
-  width: 568px;
-  height: 395px;
   box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
   line-height: 26px;
 }
