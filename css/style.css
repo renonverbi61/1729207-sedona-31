@@ -93,6 +93,7 @@
 
 .navigation__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-weight: bold;
   line-height: 26px;
@@ -369,6 +370,7 @@
 .transparent:active {
   opacity:0.3;
 }
+
 /* User activate modal */
 
 .activate-modal:link,
@@ -393,7 +395,6 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 23px 0;
   z-index: 1;
   text-align: center;
@@ -403,11 +404,13 @@
   margin-top: -120px;
 }
 
-/* Grid */
+ /*Grid */
 
 .footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 120px ;
 }
 
 
@@ -424,20 +427,30 @@
 
 }
 
-/*footer flex
+/*footer flex*/
 
-.footer__social */
+.footer__social {
+  margin-top: 36px;
+}
+
 
 .footer__social-list {
   display: flex;
   justify-content: center;
   padding: 0px;
-  align-items: baseline;
+  align-items: center;
   list-style: none;
+  margin: 0px;
 }
+
+
 .footer__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--basic-blue);
-  padding: 7px 12px; /*Неровные квадраты*/
+  width: 48px;
+  height: 46px;
   margin-left: 6px;
 }
 .footer__developed {
@@ -516,7 +529,7 @@
 }
 .tag {
   padding: 0;
-  margin: 0 auto;
+  margin: 23px auto 9px;
 }
 
 .selection__button {
@@ -666,7 +679,7 @@
   width: 110px;
   text-align: center;
   box-sizing: border-box;
-
+  margin-top: 9px;
   color: var(--basic-white);
   font-weight: bold;
   background-color: var(--basic-blue);
@@ -706,7 +719,7 @@
 }
 .hotel-cost {
   display: flex;
-  width: 179px;
+  width: 258px;
   justify-content: space-between;
 }
 .hotel-cost p {
