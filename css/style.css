@@ -52,9 +52,9 @@
   color: var(--basic-dark);
   height: 100%;
   min-height: 100%;
-  display: grid;
+ /* display: grid;
   grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  align-content: start;*/
   background-color: var(--special-grey-form);
 }
 
@@ -77,6 +77,9 @@
   margin-left: auto;
   box-shadow: 0px 0px 15px 5px var(--body-shadow);
   background-color: var(--basic-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*.navigation*/
@@ -591,8 +594,11 @@ section welcome
 
 .footer-superimposition {
   margin-top: -120px;
-  position: absolute;
   z-index: 2;
+}
+.main,
+.main-catalog {
+  flex-grow: 1;
 }
 
  /*Grid */
@@ -604,7 +610,7 @@ section welcome
   background-color: var(--backgroung-footer);
   align-items: center;
   padding-top: 35px;
-  padding-bottom: 36px;
+  padding-bottom: 35px;
 }
 
 .container_footer-develop {
@@ -1090,10 +1096,12 @@ section welcome
 }
 
 /*stars*/
+
 .number-of-stars {
   list-style: none;
   display: inline-flex;
 }
+
 .star {
   background-image: url("../img/icon/star-icon.svg");
   height: 17px;
@@ -1152,6 +1160,7 @@ section welcome
 .hotel-cost div {
   margin-right: 6px;
 }
+
 .hotel-cost p {
   margin-bottom: 6px;
 }
